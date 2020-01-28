@@ -1,0 +1,15 @@
+header {
+  height: 400px;
+  margin-top: 120px;
+  width: 100%;
+  background-color: #eb9d00;
+  background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+}
+img {
+  position: relative;
+  left: 40%;
+}
+h2 {
+  position: relative;
+  left: 40%;
+}
