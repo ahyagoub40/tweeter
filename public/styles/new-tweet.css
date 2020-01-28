@@ -18,3 +18,32 @@ textarea {
   border-bottom: solid black;
   resize: none;
 }
+article {
+  width: 100%;
+  background-color: #f4f1ec;
+  margin-top: 100px;
+  border: solid;
+  padding: 1.5em;
+  transition: 1s;
+}
+article header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em;
+}
+article footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border-top: solid;
+  padding: 0.5em;
+}
+#tweeterid {
+  display: none;
+}
+article:hover {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
