@@ -9,6 +9,6 @@ jQuery(function($) {
     $(".counter:contains('-')").css('color', 'red');
   });
   $("article").hover(function() {
-    $("#tweeterid").toggle();
+    $(".tweeterid").toggle();
   });
 });

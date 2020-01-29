@@ -41,7 +41,7 @@ article footer {
   border-top: solid;
   padding: 0.5em;
 }
-#tweeterid {
+.tweeterid {
   display: none;
 }
 article:hover {
