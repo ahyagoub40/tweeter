@@ -41,12 +41,16 @@ const createTweetElement = function(tweetObject) {
   const tweetArticle = tweetObject["content"]["text"];
   const name = tweetObject["user"]["name"];
   const handle = tweetObject["user"]["handle"];
+  const avatars = tweetObject["user"]["avatars"];
   const tweetDate = tweetAge(tweetObject["created_at"]);
   const markup = `
   <container>
     <article>
       <header>
+      <span>
+        <img src=${avatars}>
         <nav>${name}</nav>
+      </span>
         <nav class="tweeterid">${handle}</nav>
       </header>
       <div class="tweetText">
@@ -62,12 +66,39 @@ const createTweetElement = function(tweetObject) {
   return markup;
 };
 
-const renderTweets = function(arrayOfTweets) {
-  arrayOfTweets.forEach((tweetObject) => {
-    const $tweet = createTweetElement(tweetObject);
-    jQuery(function($) {
-      $('#tweets-container').append($tweet);
+jQuery(function($) {
+  const renderTweets = function(arrayOfTweets) {
+    $('#tweets-container').empty();
+    arrayOfTweets.forEach((tweetObject) => {
+      const $tweet = createTweetElement(tweetObject);
+      $('#tweets-container').prepend($tweet);
+    });
+  };
+  const loadTweets = function() {
+    $.ajax({
+      method: "GET",
+      url: '/tweets',
+      success: function(arrayOfTweets) {
+        renderTweets(arrayOfTweets);
+      }
+    });
+  };
+  loadTweets();
+  $("#create-tweet").submit(function(event) {
+    event.preventDefault();
+    const $textLength = $("textarea").val().length;
+    if ($textLength === 0) {
+      alert("no message entered");
+    } else if ($textLength > 140) {
+      alert("message entered is too long");
+    }
+    $.ajax({
+      method: "POST",
+      url: '/tweets',
+      data: $(this).serialize(),
+      success: function() {
+        loadTweets();
+      },
     });
   });
-};
-renderTweets(tweetData);
+});
