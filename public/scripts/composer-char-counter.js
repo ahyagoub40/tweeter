@@ -1,14 +1,11 @@
 /* eslint-disable no-undef */
 jQuery(function($) {
-  console.log("ready");
   $(".new-tweet").keypress(function() {
-    console.log(this);
-    $(".counter").html(function(i, val) {
-      return val * 1 - 1;
+    $(".counter").text(function() {
+      return 140 - $("textarea").val().length;
     });
-    $(".counter:contains('-')").css('color', 'red');
-  });
-  $("article").hover(function() {
-    $(".tweeterid").toggle();
+    if ($(".counter").val() < 0) {
+      $(".counter").css('color', 'red');
+    }
   });
 });

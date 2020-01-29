@@ -62,8 +62,8 @@ const createTweetElement = function(tweetObject) {
   return markup;
 };
 
-const renderTweets = function(ArrayOfTweets) {
-  ArrayOfTweets.forEach((tweetObject) => {
+const renderTweets = function(arrayOfTweets) {
+  arrayOfTweets.forEach((tweetObject) => {
     const $tweet = createTweetElement(tweetObject);
     jQuery(function($) {
       $('#tweets-container').append($tweet);

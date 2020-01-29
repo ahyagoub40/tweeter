@@ -5,7 +5,7 @@
   background-color: #eb9d00;
   background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
 }
-img {
+#main-header img {
   position: relative;
   left: 40%;
 }
