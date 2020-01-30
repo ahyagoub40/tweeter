@@ -1,14 +1,18 @@
 /* eslint-disable no-undef */
 jQuery(function($) {
-  $(".new-tweet").keypress(function() {
+  $(".new-tweet").on("input", function() {
+    const $textareaLength = $("textarea").val().length;
     $(".counter").text(function() {
-      return 140 - $("textarea").val().length;
+      return 140 - $textareaLength;
     });
-    if ($(".counter").val() < 0) {
+    if ($textareaLength > 140) {
       $(".counter").css('color', 'red');
     }
+    if ($textareaLength < 140) {
+      $(".counter").css('color', 'black');
+    }
   });
-  $(".material-icons").on("click", function() {
+  $(".fas.fa-angle-double-down").on("click", function() {
     $("#create-tweet").slideToggle("slow");
   });
 });

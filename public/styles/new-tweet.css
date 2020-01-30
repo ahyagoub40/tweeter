@@ -53,11 +53,10 @@ article:hover .tweeterid {
 .error {
   display: none;
   position: relative;
-  padding: 2em;
+  padding: 0.5em;
   background-color: #4056A1;
   color: white;
   border-radius: 30px;
-  top: 10px;
 }
 .error::before {
   position: absolute;

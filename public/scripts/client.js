@@ -81,6 +81,7 @@ jQuery(function($) {
       url: '/tweets',
       data: $(this).serialize(),
       success: function() {
+        $('.error').fadeOut("slow");
         loadTweets();
       },
     });

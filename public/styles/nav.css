@@ -12,10 +12,16 @@
   flex-direction: row;
   align-items: center;
 }
+.nav-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 div span {
   font-size: 15px;
 }
-.material-icons {
+.fas.fa-angle-double-down {
   cursor: pointer;
   color: 	#ff0000;
   position: relative;
