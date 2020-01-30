@@ -8,4 +8,7 @@ jQuery(function($) {
       $(".counter").css('color', 'red');
     }
   });
+  $(".material-icons").on("click", function() {
+    $("#create-tweet").slideToggle("slow");
+  });
 });
