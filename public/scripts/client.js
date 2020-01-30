@@ -8,7 +8,7 @@
 
 const tweetAge = function(oldDate) {
   const todaysDate = new Date();
-  const tweetsDate = new Date(oldDate * 1000);
+  const tweetsDate = new Date(oldDate);
   const tweetAge = todaysDate.getDate() - tweetsDate.getDate();
   return tweetAge;
 };
@@ -68,9 +68,13 @@ jQuery(function($) {
     event.preventDefault();
     const $textLength = $("textarea").val().length;
     if ($textLength === 0) {
-      alert("no message entered");
+      $('.error').text("no message entered");
+      $('.error').fadeIn("slow");
+      return;
     } else if ($textLength > 140) {
-      alert("message entered is too long");
+      $('.error').text("message entered is too long");
+      $('.error').fadeIn("slow");
+      return;
     }
     $.ajax({
       method: "POST",
