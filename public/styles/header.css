@@ -1,15 +1,61 @@
 #main-header {
   height: 400px;
-  margin-top: 120px;
   width: 100%;
   background-color: #eb9d00;
   background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+  display: flex;
+  flex-direction: column;
+  
 }
 #main-header img {
   position: relative;
-  left: 40%;
+  margin-top: 50px;
+  width: 30%;
+  left: 30%;
 }
 h2 {
   position: relative;
-  left: 40%;
+  left: 30%;
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  #main-header {
+    height: 400px;
+    width: 30%;
+    background-color: #eb9d00;
+    background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  #main-header img {
+    position: relative;
+    width: 60%;
+    left: 20%;
+  }
+  h2 {
+    position: relative;
+    left: 20%;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #main-header {
+    height: 400px;
+    width: 30%;
+    background-color: #eb9d00;
+    background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  #main-header img {
+    width: 60%;
+    left: 20%;
+  }
+  h2 {
+    left: 25%;
+    font-size: 1em;
+  }
 }
