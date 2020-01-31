@@ -16,11 +16,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
 }
 div span {
   font-size: 15px;
-  z-index: 999;
 }
 .fas.fa-angle-double-down {
   cursor: pointer;
@@ -29,7 +27,6 @@ div span {
   animation-duration: 3s;
   animation-name: "bounceArrow";
   animation: bounceArrow 3s infinite;
-  z-index: 999;
 }
 @keyframes bounceArrow {
   0% {top: 0px;}
