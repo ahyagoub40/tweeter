@@ -18,4 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
 
 !["desktop version"](https://github.com/ahyagoub40/tweeter/blob/master/docs/desktop%20version.png?raw=true)
+!["mobile version"] (https://github.com/ahyagoub40/tweeter/blob/master/docs/mobile%20version.png?raw=true)
+
 
