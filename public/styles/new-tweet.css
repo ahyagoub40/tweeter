@@ -1,6 +1,3 @@
-section {
-  margin: 0 auto;
-}
 .counter {
   float: right;
   font-family: "Bungee", sans-serif;
@@ -35,13 +32,11 @@ article header {
 }
 #avatar-name {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 article footer {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: center;
   border-top: solid;
 }
@@ -79,165 +74,5 @@ article:hover #tweet-icons{
 @media only screen and (min-width: 768px) {
   .container {
     display: flex;
-  }
-  section {
-    margin: 0 auto;
-  }
-  .counter {
-    float: right;
-    font-family: "Bungee", sans-serif;
-  }
-  input {
-    font-family: "Bungee", sans-serif;
-    background-color: #4056A1;
-    float: left;
-    color: #ffffff;
-  }
-  textarea {
-    width: 100%;
-    background-color: #f4f1ec;
-    border: none;
-    border-bottom: solid black;
-    resize: none;
-  }
-  article {
-    width: 100%;
-    background-color: #f4f1ec;
-    margin-top: 100px;
-    border: solid;
-    padding: 0.5em;
-    transition: 1s;
-  }
-  article header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5em;
-  }
-  #avatar-name {
-    display: flex;
-    align-items: center;
-  }
-  article footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    border-top: solid;
-  }
-  .tweeterid {
-    display: none;
-  }
-  #tweet-icons {
-    display: none;
-  }
-  article:hover {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  }
-  article:hover .tweeterid {
-    display: block;
-  }
-  article:hover #tweet-icons{
-    display: block;
-  }
-  .error {
-    display: none;
-    position: relative;
-    padding: 0.5em;
-    background-color: #4056A1;
-    color: white;
-    border-radius: 30px;
-  }
-  .error::before {
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-  #create-tweet {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .container {
-    display: flex;
-  }
-  section {
-    margin: 0;
-  }
-  .counter {
-    float: right;
-    font-family: "Bungee", sans-serif;
-  }
-  input {
-    font-family: "Bungee", sans-serif;
-    background-color: #4056A1;
-    float: left;
-    color: #ffffff;
-  }
-  textarea {
-    width: 100%;
-    background-color: #f4f1ec;
-    border: none;
-    padding: 0;
-    border-bottom: solid black;
-    resize: none;
-  }
-  article {
-    width: 100%;
-    background-color: #f4f1ec;
-    margin-top: 100px;
-    border: solid;
-    padding: 0.5em;
-    transition: 1s;
-  }
-  article header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5em;
-  }
-  #avatar-name {
-    display: flex;
-    align-items: center;
-  }
-  article footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    border-top: solid;
-  }
-  .tweeterid {
-    display: none;
-  }
-  #tweet-icons {
-    display: none;
-  }
-  article:hover {
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  }
-  article:hover .tweeterid {
-    display: block;
-  }
-  article:hover #tweet-icons{
-    display: block;
-  }
-  .error {
-    display: none;
-    position: relative;
-    padding: 0.5em;
-    background-color: #4056A1;
-    color: white;
-    border-radius: 30px;
-  }
-  .error::before {
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-  #create-tweet {
-    display: none;
   }
 }

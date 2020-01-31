@@ -5,58 +5,25 @@
   background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 #main-header img {
-  position: relative;
-  margin-top: 50px;
   width: 30%;
-  left: 30%;
 }
 h2 {
-  position: relative;
-  left: 33%;
-  bottom: 20%;
   font-size: 1em;
 }
 
 @media only screen and (min-width: 768px) {
   #main-header {
-    height: 400px;
     width: 30%;
-    background-color: #eb9d00;
-    background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
     margin: 1em;
-    display: flex;
-    flex-direction: column;
-  }
-  #main-header img {
-    position: relative;
-    width: 60%;
-    left: 20%;
-  }
-  h2 {
-    position: relative;
-    left: 33%;
-    bottom: 20%;
-    font-size: 1em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  #main-header {
-    height: 400px;
-    width: 30%;
-    background-color: #eb9d00;
-    background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
   }
   #main-header img {
     width: 60%;
-    left: 20%;
   }
   h2 {
-    left: 25%;
-    font-size: 1em;
+    text-align: center;
   }
 }
