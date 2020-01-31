@@ -27,7 +27,7 @@ const createTweetElement = function(tweetObject) {
   <container>
     <article>
       <header>
-      <span>
+      <span id="avatar-name">
         <img src=${escape(avatars)}>
         <nav>${escape(name)}</nav>
       </span>
@@ -38,12 +38,23 @@ const createTweetElement = function(tweetObject) {
       </div>
       <footer>
         <p>${escape(tweetDate)} days ago</p>
-        <p>comments</p>
+        <p id="tweet-icons">
+        <i class="fas fa-thumbs-up"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-flag"></i>
+        </p>
       </footer>
     </article>
   </container>
   `;
   return markup;
+};
+
+const clearTextarea = function() {
+  $("textarea").val("");
+};
+const resetCounter = function() {
+  $(".counter").text("140");
 };
 
 jQuery(function($) {
@@ -67,7 +78,8 @@ jQuery(function($) {
   $("#create-tweet").submit(function(event) {
     event.preventDefault();
     const $textLength = $("textarea").val().length;
-    if ($textLength === 0) {
+    const spaceOnly = $("textarea").val().trim().length;
+    if (spaceOnly  === 0) {
       $('.error').text("no message entered");
       $('.error').fadeIn("slow");
       return;
@@ -76,6 +88,7 @@ jQuery(function($) {
       $('.error').fadeIn("slow");
       return;
     }
+
     $.ajax({
       method: "POST",
       url: '/tweets',
@@ -83,6 +96,8 @@ jQuery(function($) {
       success: function() {
         $('.error').fadeOut("slow");
         loadTweets();
+        clearTextarea();
+        resetCounter();
       },
     });
   });

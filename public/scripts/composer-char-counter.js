@@ -14,5 +14,6 @@ jQuery(function($) {
   });
   $(".fas.fa-angle-double-down").on("click", function() {
     $("#create-tweet").slideToggle("slow");
+    $(".new-tweet").focus();
   });
 });
