@@ -18,7 +18,18 @@ jQuery(function($) {
   loadTweets();
   $("#create-tweet").submit(function(event) {
     event.preventDefault();
-    validInput();
+    const $textLength = $("textarea").val().length;
+    const spaceOnly = $("textarea").val().trim().length;
+    $('.error').fadeOut();
+    if (spaceOnly  === 0) {
+      $('.error').text("no message entered");
+      $('.error').fadeIn("slow");
+      return;
+    } else if ($textLength > 140) {
+      $('.error').text("message entered is too long");
+      $('.error').fadeIn("slow");
+      return;
+    }
     $.ajax({
       method: "POST",
       url: '/tweets',
