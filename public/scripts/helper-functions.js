@@ -56,17 +56,4 @@ const clearTextarea = function() {
 const resetCounter = function() {
   $(".counter").text("140");
 };
-const validInput = function() {
-  const $textLength = $("textarea").val().length;
-  const spaceOnly = $("textarea").val().trim().length;
-  if (spaceOnly  === 0) {
-    $('.error').text("no message entered");
-    $('.error').fadeIn("slow");
-    return;
-  } else if ($textLength > 140) {
-    $('.error').text("message entered is too long");
-    $('.error').fadeIn("slow");
-    return;
-  }
-  $('.error').fadeOut("slow");
-};
+
